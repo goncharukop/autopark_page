@@ -1,26 +1,69 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <v-app>
+    <v-main style="display: flex; flex-direction: column; max-width: 1180px; margin: 0 auto; gap: 24px;">
+      <HeaderOne/>
+      <HeaderTwo/>
+      <ProductDetails/>
+      <MainCard/>
+      <LineDivider />
+      <CarDetails />
+      <LineDivider />
+
+      <CallToAction />
+      <LineDivider />
+
+      <OtherCars/>
+      <LineDivider />
+
+      <CommentsBuyers />
+      <LineDivider />
+
+      <CallIcon />  
+    </v-main>
+      <PageFooter />
+
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeaderOne from './components/HeaderOne.vue'
+import HeaderTwo from './components/HeaderTwo.vue'
+import ProductDetails from './components/ProductDetails.vue'
+import MainCard from './components/MainCard.vue'
+import CarDetails from './components/CarDetails.vue'
+import CallToAction from './components/CallToAction.vue'
+import OtherCars from './components/OtherCars.vue'
+import CommentsBuyers from './components/CommentsBuyers.vue'
+import PageFooter from './components/PageFooter.vue'
+import CallIcon from './components/CallIcon.vue'
+import LineDivider from './components/LineDivider.vue'
 
 export default {
   name: 'App',
+
   components: {
-    HelloWorld
-  }
+    HeaderOne,
+    HeaderTwo,
+    ProductDetails,
+    MainCard,
+    CarDetails,
+    CallToAction,
+    OtherCars,
+    CommentsBuyers,
+    PageFooter,
+    CallIcon,
+    LineDivider
+  },
+
+  data: () => ({
+    //
+  }),
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 </style>
